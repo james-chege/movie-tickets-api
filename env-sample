@@ -1,0 +1,10 @@
+JWT_SECRET_KEY=secretstring
+
+DB_PASS=
+DB_NAME=
+DB_USERNAME=postgres
+DB_HOST=127.0.0.1
+DB_PORT=5432
+
+API_KEY= get at https://omdbapi.com
+OMDB_URL=https://omdbapi.com
