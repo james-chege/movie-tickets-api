@@ -25,8 +25,8 @@ The `utils/` directory defines functions that are used throughout the app to sim
 
 ## Description
 Using the Movie API: https://www.omdbapi.com/, users can search the API for movies and select the ones they are interested in.
-- The user should be able to save their booking details as follows. 
->booking details: tickets, owner, movie data(image of the movie, summary, name, year)
+- The user can be able to save their booking details as follows. 
+>owner, image of the movie, summary, name, year
 
 ### Installing packages
 
@@ -40,7 +40,7 @@ $ yarn install
 
 1. Create a postgres database with name of your choice.
 ```bash c
-createdb symbionix_movies -U postgres 
+createdb tickets -U postgres 
 ```
 
 2. Copy .env.example to .env and edit the environment variables to match your computer's postgres credentials and the databases that you created.
