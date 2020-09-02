@@ -48,13 +48,13 @@ export default {
                 include: [
                     {
                         model: User,
+                        attributes: {exclude: ['password']},
                         as: "owner",
                     },
                 ],
             });
             return res.json({ tickets });
         } catch (err) {
-            console.log(err.message)
             const error = new HttpError(
                 "Could not get tickets, please try again later.",
                 500
