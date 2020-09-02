@@ -1,10 +1,10 @@
 {
-  "name": "symbionix-movies",
+  "name": "movies-tickets",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/index.js",
+    "start": "babel-node -- src/index.js",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo:all"
   },
