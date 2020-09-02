@@ -11,7 +11,7 @@ router.use(authenticate);
 router.post(
     '/create',
     [
-        check('ticket').not().isEmpty(),
+        check('movie').not().isEmpty(),
         check('image').not().isEmpty(),
         check('summary').not().isEmpty(),
         check('year').not().isEmpty(),
