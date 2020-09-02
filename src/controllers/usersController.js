@@ -39,12 +39,21 @@ export default {
             });
             // extra feature (send email)
             // sendConfirmationEmail(user);
-            return res.json({ user, message: "User created successfully." });
+            let token;
+            try {
+                token = generateAuthToken({ userId: user.id, email: user.email })
+            } catch (err) {
+                const error = new HttpError('Signup failed, please try again.', 500);
+                return next(error);
+            }
+
+            return res.json({ user, token, message: "User created successfully." });
         } catch (error) {
             return res.status(500).json({ error: error.message });
         }
     },
     login: async (req, res, next) => {
+        console.log(req.body)
         const { email, password } = req.body;
 
         let existingUser;
