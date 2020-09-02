@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
+import cors from 'cors';
 
 import users from './routes/users';
 import tickets from './routes/tickets';
@@ -10,6 +11,7 @@ dotenv.config()
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/users', users);
