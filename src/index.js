@@ -7,8 +7,10 @@ import tickets from './routes/tickets';
 import HttpError from './utils/http-error';
 
 dotenv.config()
-const app = express()
-app.use(bodyParser.json())
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(bodyParser.json());
 
 app.use('/api/users', users);
 app.use('/api/tickets', tickets);
@@ -23,4 +25,4 @@ app.use((error, req, res, next) => {
     res.json({ message: error.message || 'An unknown error occurred!' });
 });
 
-app.listen(8080, () => console.log('Running on localhost:8080'))
+app.listen(PORT, () => console.log(`Running on localhost:${PORT}`));

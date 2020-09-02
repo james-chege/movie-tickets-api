@@ -1,4 +1,5 @@
 JWT_SECRET_KEY=secretstring
+PORT=
 
 DB_PASS=
 DB_NAME=
