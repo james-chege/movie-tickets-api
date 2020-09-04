@@ -53,3 +53,12 @@ createdb tickets -U postgres
    ```bash
    yarn migrate:undo
    ```
+   
+   Start express server.
+   
+   ```bash
+   $ yarn start
+   ```
+   
+   Run on Postman
+   [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4253ef054598bafcc03a)
