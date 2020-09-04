@@ -41,7 +41,7 @@ export default {
             // sendConfirmationEmail(user);
             let token;
             try {
-                token = generateAuthToken({ userId: user.id, email: user.email })
+                token = await generateAuthToken({ userId: user.id, email: user.email })
             } catch (err) {
                 const error = new HttpError('Signup failed, please try again.', 500);
                 return next(error);
@@ -53,7 +53,6 @@ export default {
         }
     },
     login: async (req, res, next) => {
-        console.log(req.body)
         const { email, password } = req.body;
 
         let existingUser;
